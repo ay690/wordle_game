@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import WORDS from "./data/Words";
+import Board from "./components/Board";
 
 //const API = "https://api.frontendexpert.io/api/fe/wordle-words"
 
@@ -19,9 +20,9 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className = "app">
-     
+    <div >
     {solution}
+    <Board solution = {solution} />
     </div>
   );
 }
